@@ -1,4 +1,4 @@
-# Chrome Landing Page
+# Landing Page
 
 ## Table of Contents
 * [General Info](#General-info)

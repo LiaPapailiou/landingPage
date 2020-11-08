@@ -5,7 +5,7 @@
 * [Todo](#Todo)
 
 ## General Info
-A future landing page for Chrome
+Personal landing page for Chrome
 
 ## Todo
 * Connect to a backend API

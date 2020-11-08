@@ -38,22 +38,33 @@ function setBackgroundGreeting() {
 }
 
 function getFocus() {
-  if (localStorage.getItem('focus') === null) {
-    focus.textContent = '';
-  } else {
-    focus.textContent = localStorage.getItem('focus');
+  try {
+    fetch('http://localhost:5000/focus', { method: 'GET' })
+      .then((res) => res.json())
+      .then((data) => focus.textContent = data[0].todo)
+      .catch((err) => console.log(err));
+  } catch (err) {
+    console.log(err);
   }
 }
 
 function setFocus(e) {
-  if (e.type === 'keypress') {
-    if (e.which == 13 || e.keyCode == 13) {
-      localStorage.setItem('focus', e.target.innerText);
-      focus.blur();
-    }
-  } else {
-    localStorage.setItem('focus', e.target.innerText);
+  // TODO: post to backend
+
+  try {
+
+  } catch (err) {
+    console.log(err);
   }
+
+  // if (e.type === 'keypress') {
+  //   if (e.which == 13 || e.keyCode == 13) {
+  //     localStorage.setItem('focus', e.target.innerText);
+  //     focus.blur();
+  //   }
+  // } else {
+  //   localStorage.setItem('focus', e.target.innerText);
+  // }
 }
 
 focus.addEventListener('keypress', setFocus);

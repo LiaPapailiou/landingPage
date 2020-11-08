@@ -49,26 +49,44 @@ function getFocus() {
 }
 
 function setFocus(e) {
-  // TODO: post to backend
 
+  if (e.type === 'keypress') {
+    if (e.which == 13 || e.keyCode == 13) {
+      localStorage.setItem('focus', e.target.innerText);
+      focus.blur();
+    }
+  } else {
+    localStorage.setItem('focus', e.target.innerText);
+  }
+
+}
+
+function postData() {
   try {
+    const item = localStorage.getItem('focus');
 
+    if (item !== null) {
+      fetch('http://localhost:5000/focus',
+        {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+          method: 'PUT',
+          body: JSON.stringify({ item })
+        })
+        .then((res) => res.json())
+        .catch((err) => console.log(err));
+    }
   } catch (err) {
     console.log(err);
   }
-
-  // if (e.type === 'keypress') {
-  //   if (e.which == 13 || e.keyCode == 13) {
-  //     localStorage.setItem('focus', e.target.innerText);
-  //     focus.blur();
-  //   }
-  // } else {
-  //   localStorage.setItem('focus', e.target.innerText);
-  // }
 }
 
 focus.addEventListener('keypress', setFocus);
 focus.addEventListener('blur', setFocus);
+
 showTime();
 setBackgroundGreeting();
 getFocus();
+postData();

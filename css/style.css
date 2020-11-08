@@ -30,22 +30,19 @@ h2 {
 }
 
 h3 {
-margin-top: 40px;
-width: 20vw;
-border: 0;
-border-bottom: 2px solid #fff;
-outline: 0;
-font-size:  1.3rem;
-padding:  7px 0 ;
-color: #fff;
-background: transparent;
-font-size: 18px;
-opacity: 0.6;
+  margin-top: 40px;
+  width: 20vw;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  outline: 0;
+  font-size:  1.3rem;
+  padding:  7px 0 ;
+  color: #fff;
+  background: transparent;
+  font-size: 18px;
+  opacity: 0.6;
 }
 
-img {
-  background:  no-repeat center center/cover;
-}
 @media(max-width: 700px) {
   .time {
     font-size: 6rem;

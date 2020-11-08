@@ -19,13 +19,14 @@ router.get('/', async (req, res) => {
 // PUT 
 router.put('/', async (req, res) => {
   try {
-    const { todo } = req.body;
+    const { item } = req.body;
 
-    const focus = await DailyFocus.create({ todo });
+    const todo = await DailyFocus.create({ todo: item });
 
-    res.json(focus);
+    res.json(todo);
 
   } catch (err) {
+    console.log(err);
     res.status(500).json({ msg: 'Internal Server Error' });
   }
 });

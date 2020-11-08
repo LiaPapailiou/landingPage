@@ -2,9 +2,11 @@
 
 ## Table of Contents
 * [General Info](#General-info)
-* [To-do](#To--do)
+* [Todo](#Todo)
 
 ## General Info
 A future landing page for Chrome
 
-## To-do
+## Todo
+* Connect to a backend API
+* Fetch latest item from backend instead of Local Storage

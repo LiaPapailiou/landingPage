@@ -4,15 +4,14 @@
 * [General Info](#General-info)
 * [Technologies](#Technologies)
 * [Todo](#Todo)
-* [Installation](#Installation)
+* [Setup](#Setup)
 
 ## General Info
 Personal landing page for Chrome
 
 
 ## Technologies
-JavaScript, CSS, HTML
-
+MongoDB, Node Js, Express, JavaScript, CSS, HTML
 
 ## Todo
 * Connect to a backend API
@@ -20,9 +19,12 @@ JavaScript, CSS, HTML
 * Display background images properly
 
 
-## Installation
+## Setup
 From Server
 ```
+# Installation
 npm install
+
+# Run
 npm run start
 ```

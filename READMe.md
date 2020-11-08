@@ -14,8 +14,9 @@ Personal landing page for Chrome
 MongoDB, Node Js, Express, JavaScript, CSS, HTML
 
 ## Todo
-* Connect to a backend API
-* Fetch latest item from backend instead of Local Storage
+* ``Connect to a backend API``
+* ``Fetch latest item from backend instead of Local Storage``
+* Post to the backend API
 * Display background images properly
 
 

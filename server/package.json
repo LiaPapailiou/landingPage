@@ -1,0 +1,27 @@
+{
+  "name": "landingpage",
+  "version": "1.0.0",
+  "description": "* [General Info](#General-info)\r * [Technologies](#Technologies)\r * [Todo](#Todo)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiaPapailiou/chromeLandingPage.git"
+  },
+  "author": "Lia Papailiou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiaPapailiou/chromeLandingPage/issues"
+  },
+  "homepage": "https://github.com/LiaPapailiou/chromeLandingPage#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.13",
+    "node": "^15.0.1",
+    "nodemon": "^2.0.6"
+  }
+}

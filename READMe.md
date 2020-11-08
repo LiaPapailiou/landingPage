@@ -16,3 +16,4 @@ JavaScript, CSS, HTML
 ## Todo
 * Connect to a backend API
 * Fetch latest item from backend instead of Local Storage
+* Display background images properly

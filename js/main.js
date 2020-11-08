@@ -38,7 +38,37 @@ function setBackgroundGreeting() {
   }
 }
 
+function getName() {
+  if (localStorage.getItem('name') === null) {
+    name.textContent = 'Lia';
+  } else {
+    name.textContent = localStorage.getItem('name');
+  }
+}
 
+function getFocus() {
+  if (localStorage.getItem('focus') === null) {
+    focus.textContent = '[Enter Focus]';
+  } else {
+    name.textContent = localStorage.getItem('focus');
+  }
+}
+
+function setFocus(e) {
+  if (e.type === 'keypress') {
+    if (e.which == 13 || e.keyCode == 13) {
+      localStorage.setItem('focus', e.target.innerText);
+      focus.blur();
+    }
+  } else {
+    localStorage.setItem('focus', e.target.innerText);
+  }
+}
+
+focus.addEventListener('keypress', setFocus);
+focus.addEventListener('blur', setFocus);
 
 showTime();
 setBackgroundGreeting();
+getName();
+getFocus();

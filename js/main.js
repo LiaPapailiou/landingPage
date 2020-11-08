@@ -1,6 +1,5 @@
 const time = document.getElementById('time');
 const greeting = document.getElementById('greeting');
-const name = document.getElementById('name');
 const focus = document.getElementById('focus');
 
 function showTime() {
@@ -13,7 +12,7 @@ function showTime() {
 
   hour = hour % 12 || 12;
 
-  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)}`;
+  time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)} ${amOrPm}`;
   setTimeout(showTime, 1000);
 }
 
@@ -38,19 +37,11 @@ function setBackgroundGreeting() {
   }
 }
 
-function getName() {
-  if (localStorage.getItem('name') === null) {
-    name.textContent = 'Lia';
-  } else {
-    name.textContent = localStorage.getItem('name');
-  }
-}
-
 function getFocus() {
   if (localStorage.getItem('focus') === null) {
-    focus.textContent = '[Enter Focus]';
+    focus.textContent = '';
   } else {
-    name.textContent = localStorage.getItem('focus');
+    focus.textContent = localStorage.getItem('focus');
   }
 }
 
@@ -67,8 +58,6 @@ function setFocus(e) {
 
 focus.addEventListener('keypress', setFocus);
 focus.addEventListener('blur', setFocus);
-
 showTime();
 setBackgroundGreeting();
-getName();
 getFocus();

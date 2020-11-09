@@ -18,7 +18,7 @@ MongoDB, Node Js, Express, JavaScript, CSS, HTML
 * [x] GET latest item from backend instead of Local Storage
 * [x] POST to theAPI
 * [ ] Fix logic error with the POST
-* [ ] Display background images properly
+* [x] Display background images properly
 
 
 ## Setup
